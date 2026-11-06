@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicine Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Medicine Checker</h1>
+    <p class="sub">Drug Information Analysis and Side-Effect Search System</p>
+
+    <div class="nav">
+      <a class="on" href="index.html">Medicine Checker</a>
+      <a href="reports.html">Reports</a>
+      <a href="admin.html">Admin</a>
+    </div>
+
+    <!-- Shows only if the backend is not running -->
+    <div id="banner" class="banner" hidden></div>
+
+    <div class="card">
+      <div class="step"><span class="num">1</span>Type the medicine or chemical name</div>
+      <input id="name" list="names" placeholder="Type here, e.g. Dolo 650 or Paracetamol" autocomplete="off">
+      <datalist id="names"></datalist>
+      <div class="hint">Or just click a name:</div>
+      <div id="chips" class="chips"></div>
+
+      <div class="step"><span class="num">2</span>Type the age</div>
+      <input id="age" type="number" min="1" max="120" placeholder="Type here, e.g. 8" class="age">
+
+      <div class="step"><span class="num">3</span>Press the button</div>
+      <button id="checkBtn" class="primary">Check</button>
+      <div id="error" class="error"></div>
+    </div>
+
+    <h2 class="result-title">Your answer appears here</h2>
+    <div id="result" class="card muted">Nothing yet. Fill steps 1 and 2, then press Check.</div>
+
+    <p class="note">For learning only. Always follow the medicine label and your doctor's advice.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

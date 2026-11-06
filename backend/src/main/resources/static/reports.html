@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports - Medicine Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Reports</h1>
+    <p class="sub">Analysis of the medicines in the database</p>
+
+    <div class="nav">
+      <a href="index.html">Medicine Checker</a>
+      <a class="on" href="reports.html">Reports</a>
+      <a href="admin.html">Admin</a>
+    </div>
+
+    <div id="banner" class="banner" hidden></div>
+
+    <div id="totals" class="grid3"></div>
+
+    <div class="card">
+      <h2 class="sec-title">Most common side effects</h2>
+      <p class="sec-note" id="effectsNote">How many medicines have each side effect</p>
+      <div id="effects"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="sec-title">Medicines with the most side effects</h2>
+      <p class="sec-note">Top 5</p>
+      <div id="most"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="sec-title">Medicines per chemical (ingredient)</h2>
+      <p class="sec-note">How many medicines contain each chemical</p>
+      <div id="ingredients"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="sec-title">Safety by age group</h2>
+      <p class="sec-note">How many medicines are safe, need care, or should be avoided</p>
+      <div id="safety"></div>
+    </div>
+
+    <p class="note">For learning only. Always follow the medicine label and your doctor's advice.</p>
+  </div>
+  <script src="reports.js"></script>
+</body>
+</html>

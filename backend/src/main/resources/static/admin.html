@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - Medicine Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Admin</h1>
+    <p class="sub">Add, edit or delete medicines</p>
+
+    <div class="nav">
+      <a href="index.html">Medicine Checker</a>
+      <a href="reports.html">Reports</a>
+      <a class="on" href="admin.html">Admin</a>
+    </div>
+
+    <div class="card">
+      <label class="fl" for="adminKey" style="margin-top:0">Admin key (needed only on the online website. Leave empty on your own laptop.)</label>
+      <input id="adminKey" type="password" placeholder="Type the admin key here" autocomplete="off">
+    </div>
+
+    <div id="banner" class="banner" hidden></div>
+    <div id="msg" class="msg" hidden></div>
+
+    <div class="card">
+      <h2 class="sec-title">All medicines</h2>
+      <p class="sec-note">Click Edit to change a medicine, or Delete to remove it.</p>
+      <div id="list">Loading...</div>
+    </div>
+
+    <div class="card" id="formCard">
+      <h2 class="sec-title" id="formTitle">Add a new medicine</h2>
+
+      <label class="fl" for="f-name">Medicine name</label>
+      <input id="f-name" placeholder="e.g. Calpol 500">
+
+      <label class="fl" for="f-used">Used for</label>
+      <input id="f-used" placeholder="e.g. Fever and mild pain">
+
+      <label class="fl" for="f-ing">Chemicals inside (one per line: name | strength)</label>
+      <textarea id="f-ing" rows="3" placeholder="Paracetamol | 500 mg"></textarea>
+
+      <label class="fl" for="f-se">Side effects (one per line: name | mild, moderate or severe)</label>
+      <textarea id="f-se" rows="4" placeholder="Nausea | mild&#10;Rash | mild"></textarea>
+
+      <label class="fl" for="f-steps">How to use (one step per line)</label>
+      <textarea id="f-steps" rows="3" placeholder="Swallow with water&#10;Keep a gap of 4 to 6 hours between tablets"></textarea>
+
+      <label class="fl">Safety for each age group</label>
+      <div class="helper">For children, do not write a dose number. Write "Ask a doctor or pharmacist".</div>
+      <div id="rules"></div>
+
+      <div class="btnrow">
+        <button class="primary" id="saveBtn">Save medicine</button>
+        <button class="secondary" id="clearBtn">Clear form</button>
+      </div>
+    </div>
+
+    <p class="note">For learning only. Anyone can open this page, so a real project should add a login for the admin.</p>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
